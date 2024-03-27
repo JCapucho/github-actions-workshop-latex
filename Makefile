@@ -9,7 +9,7 @@ SCRIPTS := ${PWD}/scripts
 LATEXMK := $(or $(shell command -v latexmk),latexmk)
 LATEXMK_FLAGS := -pdf
 #LATEXMK_FLAGS += -silent
-LATEXMK_FLAGS += -view=none
+#LATEXMK_FLAGS += -view=none
 LATEXMK_FLAGS += -auxdir=${OUT}
 LATEXMK_FLAGS += -outdir=${OUT}
 LATEXMK_FLAGS += -pdflatex="pdflatex -file-line-error --shell-escape %O %S"
@@ -19,7 +19,7 @@ LATEXMK_FLAGS += -pdflatex="pdflatex -file-line-error --shell-escape %O %S"
 all: build
 
 setup:
-	@sudo apt install texlive-latex-base texlive-lang-portuguese texlive-lang-english biber texlive-latex-extra texlive-science python3-pygments python3-proselint pandoc imagemagick latexmk ghostscript 
+	@sudo apt install texlive-latex-base texlive-lang-portuguese texlive-lang-english biber texlive-latex-extra texlive-science python3-pygments python3-proselint pandoc imagemagick latexmk ghostscript lacheck chktex
 
 build: 
 	@mkdir -p ${OUT}/chapters

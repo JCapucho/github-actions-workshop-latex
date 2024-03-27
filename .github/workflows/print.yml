@@ -1,0 +1,28 @@
+name: Generate the print PDF
+on:
+  push:
+    branches:
+      - 'master'
+  workflow_dispatch:
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install the dependencies
+        run: make setup
+
+      - name: Print PDf
+        run: make print
+
+      - name: Upload the PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: Print PDF
+          path: |
+            build/thesis-print.pdf
+            build/thesis-print-final.pdf
+          retention-days: 5
