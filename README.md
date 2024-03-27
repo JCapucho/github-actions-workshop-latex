@@ -1,3 +1,11 @@
+# Projecto de latex para o workshop de GitHub Actions 2023/204
+
+Este repositório contêm o código do projeto de demonstração de uma codebase latex
+(template do relatório de tese do DETI) para o workshop de Github Actions de
+2023/2024 realizado na Universidade de Aveiro pelo GLUA e a AETTUA.
+
+Em baixo encontra-se o README original
+
 # University of Aveiro Thesis Template
 
 A thesis LaTeX template that complies with the University of Aveiro's
